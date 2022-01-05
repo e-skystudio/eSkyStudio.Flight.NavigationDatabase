@@ -12,5 +12,6 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
     {
         [Column("airport_identifier", TypeName = "TEXT(4)")]
         public string AirportIdentifier { get; set; } = null!;
+        [Column("icao_code", TypeName = "TEXT(2)")]
     }
 }
