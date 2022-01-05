@@ -11,7 +11,7 @@ if(!File.Exists(DbPath))
 
 NavigationDbContext database = new NavigationDbContext(DbPath);
 
-foreach(TerminalNdbnavaid ndb in database.TblTerminalNdbnavaids.Where(nav => nav.AirportIdentifier.Substring(0, 2) == "EB"))
+foreach(TerminalNdbnavaid ndb in database.TerminalNdbnavaids.Where(nav => nav.AirportIdentifier.Substring(0, 2) == "EB"))
 {
     Console.WriteLine($"{ndb.Identifier} - {ndb.Latitude}°N - {ndb.Longitude}°E");
 }

@@ -1,5 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using eSkyStudio.Flight.NavigationDatabase.Models;
+﻿using eSkyStudio.Flight.NavigationDatabase.Models;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace eSkyStudio.Flight.NavigationDatabase.Database;
 public partial class NavigationDbContext : DbContext
@@ -16,33 +17,33 @@ public partial class NavigationDbContext : DbContext
         DbPath = String.Empty;
     }
 
-    public virtual DbSet<Airport> TblAirports { get; set; } = null!;
-    public virtual DbSet<AirportCommunication> TblAirportCommunications { get; set; } = null!;
-    public virtual DbSet<AirportMsa> TblAirportMsas { get; set; } = null!;
-    public virtual DbSet<ControlledAirspace> TblControlledAirspaces { get; set; } = null!;
-    public virtual DbSet<CruisingTable> TblCruisingTables { get; set; } = null!;
-    public virtual DbSet<EnrouteAirway> TblEnrouteAirways { get; set; } = null!;
-    public virtual DbSet<EnrouteAirwayRestriction> TblEnrouteAirwayRestrictions { get; set; } = null!;
-    public virtual DbSet<EnrouteCommunication> TblEnrouteCommunications { get; set; } = null!;
-    public virtual DbSet<EnrouteNdbnavaid> TblEnrouteNdbnavaids { get; set; } = null!;
-    public virtual DbSet<EnrouteWaypoint> TblEnrouteWaypoints { get; set; } = null!;
-    public virtual DbSet<FirUir> TblFirUirs { get; set; } = null!;
-    public virtual DbSet<Gate> TblGates { get; set; } = null!;
-    public virtual DbSet<Gls> TblGls { get; set; } = null!;
-    public virtual DbSet<GridMora> TblGridMoras { get; set; } = null!;
-    public virtual DbSet<Header> TblHeaders { get; set; } = null!;
-    public virtual DbSet<Holding> TblHoldings { get; set; } = null!;
-    public virtual DbSet<Iap> TblIaps { get; set; } = null!;
-    public virtual DbSet<LocalizerMarker> TblLocalizerMarkers { get; set; } = null!;
-    public virtual DbSet<LocalizersGlideslope> TblLocalizersGlideslopes { get; set; } = null!;
-    public virtual DbSet<Pathpoint> TblPathpoints { get; set; } = null!;
-    public virtual DbSet<RestrictiveAirspace> TblRestrictiveAirspaces { get; set; } = null!;
-    public virtual DbSet<Runway> TblRunways { get; set; } = null!;
-    public virtual DbSet<Sid> TblSids { get; set; } = null!;
-    public virtual DbSet<Star> TblStars { get; set; } = null!;
-    public virtual DbSet<TerminalNdbnavaid> TblTerminalNdbnavaids { get; set; } = null!;
-    public virtual DbSet<TerminalWaypoint> TblTerminalWaypoints { get; set; } = null!;
-    public virtual DbSet<Vhfnavaid> TblVhfnavaids { get; set; } = null!;
+    public virtual DbSet<Airport> Airports { get; set; } = null!;
+    public virtual DbSet<AirportCommunication> AirportCommunications { get; set; } = null!;
+    public virtual DbSet<AirportMsa> AirportMsas { get; set; } = null!;
+    public virtual DbSet<ControlledAirspace> ControlledAirspaces { get; set; } = null!;
+    public virtual DbSet<CruisingTable> CruisingTables { get; set; } = null!;
+    public virtual DbSet<EnrouteAirway> EnrouteAirways { get; set; } = null!;
+    public virtual DbSet<EnrouteAirwayRestriction> EnrouteAirwayRestrictions { get; set; } = null!;
+    public virtual DbSet<EnrouteCommunication> EnrouteCommunications { get; set; } = null!;
+    public virtual DbSet<EnrouteNdbnavaid> EnrouteNdbnavaids { get; set; } = null!;
+    public virtual DbSet<EnrouteWaypoint> EnrouteWaypoints { get; set; } = null!;
+    public virtual DbSet<FirUir> FirUirs { get; set; } = null!;
+    public virtual DbSet<Gate> Gates { get; set; } = null!;
+    public virtual DbSet<Gls> Gls { get; set; } = null!;
+    public virtual DbSet<GridMora> GridMoras { get; set; } = null!;
+    public virtual DbSet<Header> Headers { get; set; } = null!;
+    public virtual DbSet<Holding> Holdings { get; set; } = null!;
+    public virtual DbSet<Iap> Iaps { get; set; } = null!;
+    public virtual DbSet<LocalizerMarker> LocalizerMarkers { get; set; } = null!;
+    public virtual DbSet<LocalizersGlideslope> LocalizersGlideslopes { get; set; } = null!;
+    public virtual DbSet<Pathpoint> Pathpoints { get; set; } = null!;
+    public virtual DbSet<RestrictiveAirspace> RestrictiveAirspaces { get; set; } = null!;
+    public virtual DbSet<Runway> Runways { get; set; } = null!;
+    public virtual DbSet<Sid> Sids { get; set; } = null!;
+    public virtual DbSet<Star> Stars { get; set; } = null!;
+    public virtual DbSet<TerminalNdbnavaid> TerminalNdbnavaids { get; set; } = null!;
+    public virtual DbSet<TerminalWaypoint> TerminalWaypoints { get; set; } = null!;
+    public virtual DbSet<Vhfnavaid> Vhfnavaids { get; set; } = null!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
