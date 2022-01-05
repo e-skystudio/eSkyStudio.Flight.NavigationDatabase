@@ -8,7 +8,7 @@ namespace NavigationDatabase.Models
 {
     [Keyless]
     [Table("tbl_grid_mora")]
-    public partial class TblGridMora
+    public partial class GridMora
     {
         [Column("starting_latitude", TypeName = "INTEGER(3)")]
         public long? StartingLatitude { get; set; }

@@ -8,7 +8,7 @@ namespace NavigationDatabase.Models
 {
     [Keyless]
     [Table("tbl_localizer_marker")]
-    public partial class TblLocalizerMarker
+    public partial class LocalizerMarker
     {
         [Column("area_code", TypeName = "TEXT(3)")]
         public string AreaCode { get; set; } = null!;

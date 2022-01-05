@@ -8,7 +8,7 @@ namespace NavigationDatabase.Models
 {
     [Keyless]
     [Table("tbl_enroute_communication")]
-    public partial class TblEnrouteCommunication
+    public partial class EnrouteCommunication
     {
         [Column("area_code", TypeName = "TEXT(3)")]
         public string? AreaCode { get; set; }

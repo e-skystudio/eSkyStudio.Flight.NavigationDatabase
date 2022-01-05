@@ -8,7 +8,7 @@ namespace NavigationDatabase.Models
 {
     [Keyless]
     [Table("tbl_localizers_glideslopes")]
-    public partial class TblLocalizersGlideslope
+    public partial class LocalizersGlideslope
     {
         [Column("area_code", TypeName = "TEXT(3)")]
         public string? AreaCode { get; set; }

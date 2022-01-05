@@ -8,7 +8,7 @@ namespace NavigationDatabase.Models
 {
     [Keyless]
     [Table("tbl_cruising_tables")]
-    public partial class TblCruisingTable
+    public partial class CruisingTable
     {
         [Column("cruise_table_identifier", TypeName = "TEXT(2)")]
         public string? CruiseTableIdentifier { get; set; }

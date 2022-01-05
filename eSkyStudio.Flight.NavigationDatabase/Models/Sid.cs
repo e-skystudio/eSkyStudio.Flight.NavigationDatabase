@@ -7,8 +7,8 @@ using Microsoft.EntityFrameworkCore;
 namespace NavigationDatabase.Models
 {
     [Keyless]
-    [Table("tbl_stars")]
-    public partial class TblStar
+    [Table("tbl_sids")]
+    public partial class Sid
     {
         [Column("area_code", TypeName = "TEXT(3)")]
         public string? AreaCode { get; set; }

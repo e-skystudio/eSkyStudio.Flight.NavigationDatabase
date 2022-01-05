@@ -7,11 +7,13 @@ using Microsoft.EntityFrameworkCore;
 namespace NavigationDatabase.Models
 {
     [Keyless]
-    [Table("tbl_enroute_ndbnavaids")]
-    public partial class TblEnrouteNdbnavaid
+    [Table("tbl_terminal_ndbnavaids")]
+    public partial class TerminalNdbnavaid
     {
         [Column("area_code", TypeName = "TEXT(3)")]
         public string? AreaCode { get; set; }
+        [Column("airport_identifier", TypeName = "TEXT(4)")]
+        public string AirportIdentifier { get; set; } = null!;
         [Column("icao_code", TypeName = "TEXT(2)")]
         public string IcaoCode { get; set; } = null!;
         [Column("ndb_identifier", TypeName = "TEXT(4)")]

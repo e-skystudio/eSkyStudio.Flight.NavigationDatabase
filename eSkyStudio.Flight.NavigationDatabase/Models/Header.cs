@@ -8,7 +8,7 @@ namespace NavigationDatabase.Models
 {
     [Keyless]
     [Table("tbl_header")]
-    public partial class TblHeader
+    public partial class Header
     {
         [Column("version", TypeName = "TEXT(5)")]
         public string Version { get; set; } = null!;
