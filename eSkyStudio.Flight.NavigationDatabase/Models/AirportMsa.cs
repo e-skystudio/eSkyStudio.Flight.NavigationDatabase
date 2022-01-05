@@ -13,7 +13,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("area_code", TypeName = "TEXT(3)")]
         public string? AreaCode { get; set; }
         [Column("icao_code", TypeName = "TEXT(2)")]
-        public string? IcaoCode { get; set; }
+        public string? IcaoRegion { get; set; }
         [Column("airport_identifier", TypeName = "TEXT(4)")]
         public string? AirportIdentifier { get; set; }
         [Column("msa_center", TypeName = "TEXT(5)")]

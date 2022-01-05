@@ -23,7 +23,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("seqno", TypeName = "INTEGER(3)")]
         public long? Seqno { get; set; }
         [Column("waypoint_icao_code", TypeName = "TEXT(2)")]
-        public string? WaypointIcaoCode { get; set; }
+        public string? WaypointIcaoRegion { get; set; }
         [Column("waypoint_identifier", TypeName = "TEXT(5)")]
         public string? WaypointIdentifier { get; set; }
         [Column("waypoint_latitude", TypeName = "DOUBLE(9)")]

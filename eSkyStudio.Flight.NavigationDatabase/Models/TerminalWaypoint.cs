@@ -15,7 +15,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("region_code", TypeName = "TEXT(4)")]
         public string RegionCode { get; set; } = null!;
         [Column("icao_code", TypeName = "TEXT(2)")]
-        public string IcaoCode { get; set; } = null!;
+        public string IcaoRegion { get; set; } = null!;
         [Column("waypoint_identifier", TypeName = "TEXT(5)")]
         public string WaypointIdentifier { get; set; } = null!;
         [Column("waypoint_name", TypeName = "TEXT(25)")]
