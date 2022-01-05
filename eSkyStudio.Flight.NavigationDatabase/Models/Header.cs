@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Globalization;
 using Microsoft.EntityFrameworkCore;
 
 namespace eSkyStudio.Flight.NavigationDatabase.Models
@@ -28,5 +29,38 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         public string PreviousFromto { get; set; } = null!;
         [Column("parsed_at", TypeName = "TEXT(22)")]
         public string ParsedAt { get; set; } = null!;
+        public DateTime EffectiveFrom
+        {
+            get
+            {
+                int day = int.Parse(EffectiveFromto.Substring(0, 2));
+                int month = int.Parse(EffectiveFromto.Substring(2, 2));
+                int endMonth = int.Parse(EffectiveFromto.Substring(6, 2));
+                int year = int.Parse("20" + EffectiveFromto.Substring(8, 2));
+                if (endMonth == 1 && month == 12) year -= 1;
+                return new DateTime(year, month, day, 00, 00, 00, Calendar.CurrentEra, DateTimeKind.Utc);;
+            }
+        }
+
+        public DateTime EffectiveTo
+        {
+            get
+            {
+                int day = int.Parse(EffectiveFromto.Substring(4, 2));
+                int month = int.Parse(EffectiveFromto.Substring(6, 2));
+                int year = int.Parse("20" + EffectiveFromto.Substring(8, 2));
+                return new DateTime(year, month, day, 23, 59, 59, Calendar.CurrentEra, DateTimeKind.Utc);
+            }
+        }
+
+        public bool IsAiracValid(DateTime date)
+        {
+            return date >= EffectiveFrom && date <= EffectiveTo;
+        }
+
+        public bool IsAiracValid()
+        {
+            return IsAiracValid(DateTime.UtcNow);
+        }
     }
 }
