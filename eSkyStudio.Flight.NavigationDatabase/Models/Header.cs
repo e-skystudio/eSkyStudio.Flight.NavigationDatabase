@@ -29,6 +29,31 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         public string PreviousFromto { get; set; } = null!;
         [Column("parsed_at", TypeName = "TEXT(22)")]
         public string ParsedAt { get; set; } = null!;
+
+        public DateTime PreviousFrom
+        {
+            get
+            {
+                int day = int.Parse(PreviousFromto.Substring(0, 2));
+                int month = int.Parse(PreviousFromto.Substring(2, 2));
+                int endMonth = int.Parse(PreviousFromto.Substring(6, 2));
+                int year = int.Parse("20" + PreviousFromto.Substring(8, 2));
+                if (endMonth == 1 && month == 12) year -= 1;
+                return new DateTime(year, month, day, 00, 00, 00, Calendar.CurrentEra, DateTimeKind.Utc);
+            }
+        }
+
+        public DateTime PreviousTo
+        {
+            get
+            {
+                int day = int.Parse(PreviousFromto.Substring(4, 2));
+                int month = int.Parse(PreviousFromto.Substring(6, 2));
+                int year = int.Parse("20" + PreviousFromto.Substring(8, 2));
+                return new DateTime(year, month, day, 23, 59, 59, Calendar.CurrentEra, DateTimeKind.Utc);
+            }
+        }
+
         public DateTime EffectiveFrom
         {
             get
@@ -38,7 +63,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
                 int endMonth = int.Parse(EffectiveFromto.Substring(6, 2));
                 int year = int.Parse("20" + EffectiveFromto.Substring(8, 2));
                 if (endMonth == 1 && month == 12) year -= 1;
-                return new DateTime(year, month, day, 00, 00, 00, Calendar.CurrentEra, DateTimeKind.Utc);;
+                return new DateTime(year, month, day, 00, 00, 00, Calendar.CurrentEra, DateTimeKind.Utc);
             }
         }
 
