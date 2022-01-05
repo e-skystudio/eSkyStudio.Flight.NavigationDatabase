@@ -8,7 +8,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
 {
     [Keyless]
     [Table("tbl_terminal_waypoints")]
-    public partial class TerminalWaypoint :EnrouteWaypoint, INavigable
+    public partial class TerminalWaypoint :EnrouteWaypoint
     {
         [Column("region_code", TypeName = "TEXT(4)")]
         public string? AirportIdentifier { get; set; }

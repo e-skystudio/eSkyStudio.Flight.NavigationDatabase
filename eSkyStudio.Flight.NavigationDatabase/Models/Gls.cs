@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using eSkyStudio.Flight.NavigationDatabase.Models.Abstract;
 using Microsoft.EntityFrameworkCore;
 
 namespace eSkyStudio.Flight.NavigationDatabase.Models
 {
     [Keyless]
     [Table("tbl_gls")]
-    public partial class Gls : INavigable
+    public partial class Gls : Navigable
     {
-        [Column("area_code", TypeName = "TEXT(3)")]
-        public string? AreaCode { get; set; }
         [Column("airport_identifier", TypeName = "TEXT(4)")]
         public string? AirportIdentifier { get; set; }
-        [Column("icao_code", TypeName = "TEXT(2)")]
-        public string? IcaoRegion { get; set; }
         [Column("gls_ref_path_identifier", TypeName = "TEXT(4)")]
         public string? Identifier { get; set; }
         [Column("gls_category", TypeName = "TEXT(1)")]
@@ -27,9 +24,9 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("gls_approach_bearing", TypeName = "DOUBLE(5)")]
         public double? GlsApproachBearing { get; set; }
         [Column("station_latitude", TypeName = "DOUBLE(9)")]
-        public double? Latitude { get; set; }
+        public override double Latitude { get; set; }
         [Column("station_longitude", TypeName = "DOUBLE(10)")]
-        public double? Longitude { get; set; }
+        public override double Longitude { get; set; }
         [Column("gls_station_ident", TypeName = "TEXT(4)")]
         public string? GlsStationIdent { get; set; }
         [Column("gls_approach_slope", TypeName = "DOUBLE(4)")]

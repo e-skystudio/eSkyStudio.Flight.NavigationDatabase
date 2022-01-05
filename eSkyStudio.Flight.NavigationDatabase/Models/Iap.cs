@@ -27,7 +27,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("waypoint_identifier", TypeName = "TEXT(5)")]
         public string? Identifier { get; set; }
         [Column("waypoint_latitude", TypeName = "DOUBLE(9)")]
-        public double? Latitude { get; set; }
+        public double Latitude { get; set; }
         [Column("waypoint_longitude", TypeName = "DOUBLE(10)")]
         public double?Longitude { get; set; }
         [Column("waypoint_description_code", TypeName = "TEXT(4)")]
