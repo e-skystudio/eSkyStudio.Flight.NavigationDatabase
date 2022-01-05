@@ -8,7 +8,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
 {
     [Keyless]
     [Table("tbl_runways")]
-    public partial class Runway
+    public partial class Runway : INavigable
     {
         [Column("area_code", TypeName = "TEXT(3)")]
         public string? AreaCode { get; set; }
@@ -19,9 +19,12 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("runway_identifier", TypeName = "TEXT(3)")]
         public string RunwayIdentifier { get; set; } = null!;
         [Column("runway_latitude", TypeName = "DOUBLE(9)")]
-        public double? RunwayLatitude { get; set; }
+        public string Identifier {
+            get => $"{AirportIdentifier}{RunwayIdentifier.Substring(2)}";
+        }
+        public double? Latitude { get; set; }
         [Column("runway_longitude", TypeName = "DOUBLE(10)")]
-        public double? RunwayLongitude { get; set; }
+        public double? Longitude { get; set; }
         [Column("runway_gradient", TypeName = "DOUBLE(5)")]
         public double? RunwayGradient { get; set; }
         [Column("runway_magnetic_bearing", TypeName = "DOUBLE(6)")]

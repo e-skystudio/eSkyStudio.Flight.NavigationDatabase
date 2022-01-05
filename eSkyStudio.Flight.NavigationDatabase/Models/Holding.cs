@@ -8,7 +8,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
 {
     [Keyless]
     [Table("tbl_holdings")]
-    public partial class Holding
+    public partial class Holding : INavigable
     {
         [Column("area_code", TypeName = "TEXT(3)")]
         public string? AreaCode { get; set; }
@@ -17,13 +17,13 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("icao_code", TypeName = "TEXT(2)")]
         public string? IcaoRegion { get; set; }
         [Column("waypoint_identifier", TypeName = "TEXT(5)")]
-        public string? WaypointIdentifier { get; set; }
+        public string? Identifier { get; set; }
         [Column("holding_name", TypeName = "TEXT(25)")]
         public string? HoldingName { get; set; }
         [Column("waypoint_latitude", TypeName = "DOUBLE(9)")]
-        public double? WaypointLatitude { get; set; }
+        public double? Latitude { get; set; }
         [Column("waypoint_longitude", TypeName = "DOUBLE(10)")]
-        public double? WaypointLongitude { get; set; }
+        public double? Longitude { get; set; }
         [Column("duplicate_identifier", TypeName = "INTEGER(2)")]
         public long? DuplicateIdentifier { get; set; }
         [Column("inbound_holding_course", TypeName = "DOUBLE(5)")]

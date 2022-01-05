@@ -25,11 +25,11 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("waypoint_icao_code", TypeName = "TEXT(2)")]
         public string? WaypointIcaoRegion { get; set; }
         [Column("waypoint_identifier", TypeName = "TEXT(5)")]
-        public string? WaypointIdentifier { get; set; }
+        public string? Identifier { get; set; }
         [Column("waypoint_latitude", TypeName = "DOUBLE(9)")]
-        public double? WaypointLatitude { get; set; }
+        public double? Latitude { get; set; }
         [Column("waypoint_longitude", TypeName = "DOUBLE(10)")]
-        public double? WaypointLongitude { get; set; }
+        public double?Longitude { get; set; }
         [Column("waypoint_description_code", TypeName = "TEXT(4)")]
         public string? WaypointDescriptionCode { get; set; }
         [Column("turn_direction", TypeName = "TEXT(1)")]

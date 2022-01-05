@@ -8,16 +8,16 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
 {
     [Keyless]
     [Table("tbl_vhfnavaids")]
-    public partial class Vhfnavaid
+    public partial class Vhfnavaid : INavigable
     {
         [Column("area_code", TypeName = "TEXT(3)")]
         public string? AreaCode { get; set; }
         [Column("airport_identifier", TypeName = "TEXT(4)")]
         public string? AirportIdentifier { get; set; }
         [Column("icao_code", TypeName = "TEXT(2)")]
-        public string IcaoRegion { get; set; } = null!;
+        public string? IcaoRegion { get; set; }
         [Column("vor_identifier", TypeName = "TEXT(4)")]
-        public string VorIdentifier { get; set; } = null!;
+        public string Identifier { get; set; } = null!;
         [Column("vor_name", TypeName = "TEXT(30)")]
         public string? VorName { get; set; }
         [Column("vor_frequency", TypeName = "DOUBLE(5)")]
@@ -25,9 +25,9 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("navaid_class", TypeName = "TEXT(5)")]
         public string? NavaidClass { get; set; }
         [Column("vor_latitude", TypeName = "DOUBLE(9)")]
-        public double? VorLatitude { get; set; }
+        public double? Latitude { get; set; }
         [Column("vor_longitude", TypeName = "DOUBLE(10)")]
-        public double? VorLongitude { get; set; }
+        public double? Longitude { get; set; }
         [Column("dme_ident", TypeName = "TEXT(4)")]
         public string? DmeIdent { get; set; }
         [Column("dme_latitude", TypeName = "DOUBLE(9)")]

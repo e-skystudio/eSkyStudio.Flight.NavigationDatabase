@@ -8,7 +8,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
 {
     [Keyless]
     [Table("tbl_gate")]
-    public partial class Gate
+    public partial class Gate : INavigable
     {
         [Column("area_code", TypeName = "TEXT(3)")]
         public string? AreaCode { get; set; }
@@ -17,11 +17,11 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("icao_code", TypeName = "TEXT(2)")]
         public string? IcaoRegion { get; set; }
         [Column("gate_identifier", TypeName = "TEXT(5)")]
-        public string? GateIdentifier { get; set; }
+        public string? Identifier { get; set; }
         [Column("gate_latitude", TypeName = "DOUBLE(9)")]
-        public double? GateLatitude { get; set; }
+        public double? Latitude { get; set; }
         [Column("gate_longitude", TypeName = "DOUBLE(10)")]
-        public double? GateLongitude { get; set; }
+        public double? Longitude { get; set; }
         [Column("name", TypeName = "TEXT(25)")]
         public string? Name { get; set; }
     }

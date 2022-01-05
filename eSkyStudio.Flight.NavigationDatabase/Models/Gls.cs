@@ -8,7 +8,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
 {
     [Keyless]
     [Table("tbl_gls")]
-    public partial class Gls
+    public partial class Gls : INavigable
     {
         [Column("area_code", TypeName = "TEXT(3)")]
         public string? AreaCode { get; set; }
@@ -17,7 +17,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("icao_code", TypeName = "TEXT(2)")]
         public string? IcaoRegion { get; set; }
         [Column("gls_ref_path_identifier", TypeName = "TEXT(4)")]
-        public string? GlsRefPathIdentifier { get; set; }
+        public string? Identifier { get; set; }
         [Column("gls_category", TypeName = "TEXT(1)")]
         public string? GlsCategory { get; set; }
         [Column("gls_channel", TypeName = "INTEGER(5)")]
@@ -27,9 +27,9 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("gls_approach_bearing", TypeName = "DOUBLE(5)")]
         public double? GlsApproachBearing { get; set; }
         [Column("station_latitude", TypeName = "DOUBLE(9)")]
-        public double? StationLatitude { get; set; }
+        public double? Latitude { get; set; }
         [Column("station_longitude", TypeName = "DOUBLE(10)")]
-        public double? StationLongitude { get; set; }
+        public double? Longitude { get; set; }
         [Column("gls_station_ident", TypeName = "TEXT(4)")]
         public string? GlsStationIdent { get; set; }
         [Column("gls_approach_slope", TypeName = "DOUBLE(4)")]
