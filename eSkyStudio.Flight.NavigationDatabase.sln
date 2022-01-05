@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSkyStudio.Flight.NavigationDatabase", "eSkyStudio.Flight.NavigationDatabase\eSkyStudio.Flight.NavigationDatabase.csproj", "{20B65ACF-D8BE-4D91-A62F-490AAC245437}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSkyStudio.Flight.NavigationDatabase.Tester", "eSkyStudio.Flight.NavigationDatabase.Tester\eSkyStudio.Flight.NavigationDatabase.Tester.csproj", "{3620BA49-FD43-48D4-AFB6-8903023E1802}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{20B65ACF-D8BE-4D91-A62F-490AAC245437}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20B65ACF-D8BE-4D91-A62F-490AAC245437}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20B65ACF-D8BE-4D91-A62F-490AAC245437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3620BA49-FD43-48D4-AFB6-8903023E1802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3620BA49-FD43-48D4-AFB6-8903023E1802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3620BA49-FD43-48D4-AFB6-8903023E1802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3620BA49-FD43-48D4-AFB6-8903023E1802}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
