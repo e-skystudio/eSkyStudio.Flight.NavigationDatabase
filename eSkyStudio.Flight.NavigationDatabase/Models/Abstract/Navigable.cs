@@ -14,6 +14,17 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models.Abstract
         public abstract double Latitude { get; set;}
         public abstract double Longitude { get; set;}
 
+        public Coordonate GetCoordonate()
+        {
+            return new Coordonate(Latitude, Longitude);
+        }
+
+        public void SetCoordonate(Coordonate c1)
+        {
+            Latitude = c1.Latitude;
+            Longitude = c1.Longitude;
+        }
+
         public Navigable()
         {
         }
