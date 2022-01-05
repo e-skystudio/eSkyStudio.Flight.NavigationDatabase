@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using NavigationDatabase.Models;
+using eSkyStudio.Flight.NavigationDatabase.Models;
 
-namespace NavigationDatabase.Database;
+namespace eSkyStudio.Flight.NavigationDatabase.Database;
 public partial class NavigationDbContext : DbContext
 {
     public string DbPath { get; set; }
