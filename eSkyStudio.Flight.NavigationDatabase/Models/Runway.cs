@@ -2,29 +2,31 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using eSkyStudio.Flight.NavigationDatabase.Models.Abstract;
 using Microsoft.EntityFrameworkCore;
 
 namespace eSkyStudio.Flight.NavigationDatabase.Models
 {
     [Keyless]
     [Table("tbl_runways")]
-    public partial class Runway : INavigable
+    public partial class Runway : Navigable
     {
-        [Column("area_code", TypeName = "TEXT(3)")]
-        public string? AreaCode { get; set; }
-        [Column("icao_code", TypeName = "TEXT(2)")]
-        public string? IcaoRegion { get; set; }
         [Column("airport_identifier", TypeName = "TEXT(4)")]
         public string AirportIdentifier { get; set; } = null!;
         [Column("runway_identifier", TypeName = "TEXT(3)")]
         public string RunwayIdentifier { get; set; } = null!;
         [Column("runway_latitude", TypeName = "DOUBLE(9)")]
-        public string Identifier {
+        public override string Identifier {
             get => $"{AirportIdentifier}{RunwayIdentifier.Substring(2)}";
+            set
+            {
+                AirportIdentifier = value.Substring(0, 4);
+                RunwayIdentifier = $"RW{value.Substring(4)}";
+            }
         }
-        public double? Latitude { get; set; }
+        public override double Latitude { get; set; }
         [Column("runway_longitude", TypeName = "DOUBLE(10)")]
-        public double? Longitude { get; set; }
+        public override double Longitude { get; set; }
         [Column("runway_gradient", TypeName = "DOUBLE(5)")]
         public double? RunwayGradient { get; set; }
         [Column("runway_magnetic_bearing", TypeName = "DOUBLE(6)")]

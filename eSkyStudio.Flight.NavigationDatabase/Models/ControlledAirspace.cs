@@ -33,9 +33,9 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("boundary_via", TypeName = "TEXT(2)")]
         public string? BoundaryVia { get; set; }
         [Column("latitude", TypeName = "DOUBLE(9)")]
-        public double? Latitude { get; set; }
+        public double Latitude { get; set; }
         [Column("longitude", TypeName = "DOUBLE(10)")]
-        public double? Longitude { get; set; }
+        public double Longitude { get; set; }
         [Column("arc_origin_latitude", TypeName = "DOUBLE(9)")]
         public double? ArcOriginLatitude { get; set; }
         [Column("arc_origin_longitude", TypeName = "DOUBLE(10)")]

@@ -29,8 +29,8 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("callsign", TypeName = "TEXT(30)")]
         public string? Callsign { get; set; }
         [Column("latitude", TypeName = "DOUBLE(9)")]
-        public double? Latitude { get; set; }
+        public double Latitude { get; set; }
         [Column("longitude", TypeName = "DOUBLE(10)")]
-        public double? Longitude { get; set; }
+        public double Longitude { get; set; }
     }
 }
