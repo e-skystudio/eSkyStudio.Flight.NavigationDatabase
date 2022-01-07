@@ -14,7 +14,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("airport_identifier", TypeName = "TEXT(4)")]
         public string? AirportIdentifier { get; set; }
         [Column("vor_identifier", TypeName = "TEXT(4)")]
-        public string Identifier { get; set; } = null!;
+        public override string Identifier { get; set; } = null!;
         [Column("vor_name", TypeName = "TEXT(30)")]
         public string? VorName { get; set; }
         [Column("vor_frequency", TypeName = "DOUBLE(5)")]

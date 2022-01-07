@@ -16,8 +16,13 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("runway_identifier", TypeName = "TEXT(3)")]
         public string RunwayIdentifier { get; set; } = null!;
         [Column("runway_latitude", TypeName = "DOUBLE(9)")]
-        public string Identifier {
+        public override string Identifier {
             get => $"{AirportIdentifier}{RunwayIdentifier.Substring(2)}";
+            set
+            {
+                AirportIdentifier = value.Substring(0, 4);
+                RunwayIdentifier = $"RW{value.Substring(4)}";
+            }
         }
         public override double Latitude { get; set; }
         [Column("runway_longitude", TypeName = "DOUBLE(10)")]

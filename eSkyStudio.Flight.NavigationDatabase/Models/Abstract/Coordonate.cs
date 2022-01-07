@@ -22,5 +22,10 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models.Abstract
             Latitude = lat;
             Longitude = lon;
         }
+
+        public override string ToString()
+        {
+            return $"{Latitude:00.0000}°N, {Longitude:000.00000}";
+        }
     }
 }

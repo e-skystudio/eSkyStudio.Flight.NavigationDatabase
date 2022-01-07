@@ -13,7 +13,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models.Abstract
         public string? IcaoRegion { get; set; }
         public abstract double Latitude { get; set;}
         public abstract double Longitude { get; set;}
-
+        public abstract string Identifier { get; set; }
         public Coordonate GetCoordonate()
         {
             return new Coordonate(Latitude, Longitude);

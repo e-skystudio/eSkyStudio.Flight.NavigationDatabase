@@ -12,7 +12,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
     public partial class EnrouteWaypoint : Navigable
     {
         [Column("waypoint_identifier", TypeName = "TEXT(5)")]
-        public string? Identifier { get; set; }
+        public override string Identifier { get; set; } = null!;
         [Column("waypoint_name", TypeName = "TEXT(25)")]
         public string? WaypointName { get; set; }
         [Column("waypoint_type", TypeName = "TEXT(3)")]

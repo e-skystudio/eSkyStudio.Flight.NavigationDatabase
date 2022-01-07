@@ -12,7 +12,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
     public partial class Airport : Navigable
     {
         [Column("airport_identifier", TypeName = "TEXT(4)")]
-        public string Identifier { get; set; } = null!;
+        public override string Identifier { get; set; } = null!;
         [Column("airport_identifier_3letter", TypeName = "TEXT(3)")]
         public string? AirportIdentifier3letter { get; set; }
         [Column("airport_name", TypeName = "TEXT(3)")]

@@ -18,7 +18,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("llz_identifier", TypeName = "TEXT(4)")]
         public string LlzIdentifier { get; set; } = null!;
         [Column("marker_identifier", TypeName = "TEXT(5)")]
-        public string? Identifier { get; set; }
+        public override string Identifier { get; set; } = null!;
         [Column("marker_type", TypeName = "TEXT(3)")]
         public string MarkerType { get; set; } = null!;
         [Column("marker_latitude", TypeName = "DOUBLE(9)")]

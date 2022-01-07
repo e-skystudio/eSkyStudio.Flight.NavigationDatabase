@@ -14,7 +14,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("region_code", TypeName = "TEXT(4)")]
         public string? RegionCode { get; set; }
         [Column("waypoint_identifier", TypeName = "TEXT(5)")]
-        public string? Identifier { get; set; }
+        public override string Identifier { get; set; } = null!;
         [Column("holding_name", TypeName = "TEXT(25)")]
         public string? HoldingName { get; set; }
         [Column("waypoint_latitude", TypeName = "DOUBLE(9)")]

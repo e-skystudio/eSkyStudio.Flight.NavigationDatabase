@@ -12,7 +12,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
     public partial class EnrouteNdbnavaid : Navigable
     {
         [Column("ndb_identifier", TypeName = "TEXT(4)")]
-        public string? Identifier { get; set; }
+        public override string Identifier { get; set; } = null!;
         [Column("ndb_name", TypeName = "TEXT(30)")]
         public string? NdbName { get; set; }
         [Column("ndb_frequency", TypeName = "DOUBLE(5)")]
