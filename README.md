@@ -1,4 +1,4 @@
-# NavigationDatabase
+# Navigation Database
 C# Library to parse Navigraph's SimToolkitPro (v0.4+) database into C# classes with EF6 and dotnet 6.0.
 
 ## Current Version
