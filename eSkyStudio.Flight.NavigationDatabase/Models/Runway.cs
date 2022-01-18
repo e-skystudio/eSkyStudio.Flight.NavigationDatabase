@@ -15,7 +15,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         public string AirportIdentifier { get; set; } = null!;
         [Column("runway_identifier", TypeName = "TEXT(3)")]
         public string RunwayIdentifier { get; set; } = null!;
-        [Column("runway_latitude", TypeName = "DOUBLE(9)")]
+        [NotMapped]
         public override string Identifier {
             get => $"{AirportIdentifier}{RunwayIdentifier.Substring(2)}";
             set
@@ -24,6 +24,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
                 RunwayIdentifier = $"RW{value.Substring(4)}";
             }
         }
+        [Column("runway_latitude", TypeName = "DOUBLE(9)")]
         public override double Latitude { get; set; }
         [Column("runway_longitude", TypeName = "DOUBLE(10)")]
         public override double Longitude { get; set; }
