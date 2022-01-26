@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace eSkyStudio.Flight.NavigationDatabase.Models
@@ -11,7 +8,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
     public partial class CruisingTable
     {
         [Column("cruise_table_identifier", TypeName = "TEXT(2)")]
-        public string? CruiseTableIdentifier { get; set; }
+        public string CruiseTableIdentifier { get; set; }
         [Column("seqno", TypeName = "INTEGER(3)")]
         public long? Seqno { get; set; }
         [Column("course_from", TypeName = "DOUBLE(5)")]
@@ -19,7 +16,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("course_to", TypeName = "DOUBLE(5)")]
         public double? CourseTo { get; set; }
         [Column("mag_true", TypeName = "TEXT(1)")]
-        public string? MagTrue { get; set; }
+        public string MagTrue { get; set; }
         [Column("cruise_level_from1", TypeName = "INTEGER(5)")]
         public long? CruiseLevelFrom1 { get; set; }
         [Column("vertical_separation1", TypeName = "INTEGER(5)")]

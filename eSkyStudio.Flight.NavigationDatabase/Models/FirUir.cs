@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace eSkyStudio.Flight.NavigationDatabase.Models
@@ -11,23 +8,23 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
     public partial class FirUir
     {
         [Column("area_code", TypeName = "TEXT(3)")]
-        public string? AreaCode { get; set; }
+        public string AreaCode { get; set; }
         [Column("fir_uir_identifier", TypeName = "TEXT(4)")]
-        public string? FirUirIdentifier { get; set; }
+        public string FirUirIdentifier { get; set; }
         [Column("fir_uir_address", TypeName = "TEXT(4)")]
-        public string? FirUirAddress { get; set; }
+        public string FirUirAddress { get; set; }
         [Column("fir_uir_name", TypeName = "TEXT(25)")]
-        public string? FirUirName { get; set; }
+        public string FirUirName { get; set; }
         [Column("fir_uir_indicator", TypeName = "TEXT(1)")]
-        public string? FirUirIndicator { get; set; }
+        public string FirUirIndicator { get; set; }
         [Column("seqno", TypeName = "INTEGER(3)")]
         public long? Seqno { get; set; }
         [Column("boundary_via", TypeName = "TEXT(2)")]
-        public string? BoundaryVia { get; set; }
+        public string BoundaryVia { get; set; }
         [Column("adjacent_fir_identifier", TypeName = "TEXT(4)")]
-        public string? AdjacentFirIdentifier { get; set; }
+        public string AdjacentFirIdentifier { get; set; }
         [Column("adjacent_uir_identifier", TypeName = "TEXT(4)")]
-        public string? AdjacentUirIdentifier { get; set; }
+        public string AdjacentUirIdentifier { get; set; }
         [Column("reporting_units_speed", TypeName = "INTEGER(1)")]
         public long? ReportingUnitsSpeed { get; set; }
         [Column("reporting_units_altitude", TypeName = "INTEGER(1)")]
@@ -45,12 +42,12 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("arc_bearing", TypeName = "DOUBLE(5)")]
         public double? ArcBearing { get; set; }
         [Column("fir_upper_limit", TypeName = "TEXT(5)")]
-        public string? FirUpperLimit { get; set; }
+        public string FirUpperLimit { get; set; }
         [Column("uir_lower_limit", TypeName = "TEXT(5)")]
-        public string? UirLowerLimit { get; set; }
+        public string UirLowerLimit { get; set; }
         [Column("uir_upper_limit", TypeName = "TEXT(5)")]
-        public string? UirUpperLimit { get; set; }
+        public string UirUpperLimit { get; set; }
         [Column("cruise_table_identifier", TypeName = "TEXT(2)")]
-        public string? CruiseTableIdentifier { get; set; }
+        public string CruiseTableIdentifier { get; set; }
     }
 }

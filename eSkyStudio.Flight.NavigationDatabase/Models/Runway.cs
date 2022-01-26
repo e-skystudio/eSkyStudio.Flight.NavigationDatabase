@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using eSkyStudio.Flight.NavigationDatabase.Models.Abstract;
 using Microsoft.EntityFrameworkCore;
 
@@ -45,9 +42,9 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("runway_width", TypeName = "INTEGER(3)")]
         public long? RunwayWidth { get; set; }
         [Column("llz_identifier", TypeName = "TEXT(4)")]
-        public string? LlzIdentifier { get; set; }
+        public string LlzIdentifier { get; set; }
         [Column("llz_mls_gls_category", TypeName = "TEXT(1)")]
-        public string? LlzMlsGlsCategory { get; set; }
+        public string LlzMlsGlsCategory { get; set; }
         [Column("surface_code", TypeName = "INTEGER(3)")]
         public long? SurfaceCode { get; set; }
     }

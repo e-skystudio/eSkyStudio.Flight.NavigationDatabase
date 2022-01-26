@@ -8,6 +8,6 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
     public partial class TerminalWaypoint : Waypoint
     {
         [Column("region_code", TypeName = "TEXT(4)")]
-        public string? AirportIdentifier { get; set; }
+        public string AirportIdentifier { get; set; }
     }
 }

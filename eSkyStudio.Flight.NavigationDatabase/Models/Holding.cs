@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using eSkyStudio.Flight.NavigationDatabase.Models.Abstract;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,11 +9,11 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
     public partial class Holding : Navigable
     {
         [Column("region_code", TypeName = "TEXT(4)")]
-        public string? RegionCode { get; set; }
+        public string RegionCode { get; set; }
         [Column("waypoint_identifier", TypeName = "TEXT(5)")]
         public override string Identifier { get; set; } = null!;
         [Column("holding_name", TypeName = "TEXT(25)")]
-        public string? HoldingName { get; set; }
+        public string HoldingName { get; set; }
         [Column("waypoint_latitude", TypeName = "DOUBLE(9)")]
         public override double Latitude { get; set; }
         [Column("waypoint_longitude", TypeName = "DOUBLE(10)")]
@@ -26,7 +23,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("inbound_holding_course", TypeName = "DOUBLE(5)")]
         public double? InboundHoldingCourse { get; set; }
         [Column("turn_direction", TypeName = "TEXT(1)")]
-        public string? TurnDirection { get; set; }
+        public string TurnDirection { get; set; }
         [Column("leg_length", TypeName = "DOUBLE(4)")]
         public double? LegLength { get; set; }
         [Column("leg_time", TypeName = "DOUBLE(3)")]

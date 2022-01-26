@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using eSkyStudio.Flight.NavigationDatabase.Models.Abstract;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace eSkyStudio.Flight.NavigationDatabase.Models
@@ -12,15 +8,15 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
     public partial class Gls /*: Navigable #TDB*/
     {
         [Column("airport_identifier", TypeName = "TEXT(4)")]
-        public string? AirportIdentifier { get; set; }
+        public string AirportIdentifier { get; set; }
         [Column("gls_ref_path_identifier", TypeName = "TEXT(4)")]
-        public string? Identifier { get; set; }
+        public string Identifier { get; set; }
         [Column("gls_category", TypeName = "TEXT(1)")]
-        public string? GlsCategory { get; set; }
+        public string GlsCategory { get; set; }
         [Column("gls_channel", TypeName = "INTEGER(5)")]
         public long? GlsChannel { get; set; }
         [Column("runway_identifier", TypeName = "TEXT(5)")]
-        public string? RunwayIdentifier { get; set; }
+        public string RunwayIdentifier { get; set; }
         [Column("gls_approach_bearing", TypeName = "DOUBLE(5)")]
         public double? GlsApproachBearing { get; set; }
         [Column("station_latitude", TypeName = "DOUBLE(9)")]
@@ -28,7 +24,7 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("station_longitude", TypeName = "DOUBLE(10)")]
         public /*override*/ double Longitude { get; set; }
         [Column("gls_station_ident", TypeName = "TEXT(4)")]
-        public string? GlsStationIdent { get; set; }
+        public string GlsStationIdent { get; set; }
         [Column("gls_approach_slope", TypeName = "DOUBLE(4)")]
         public double? GlsApproachSlope { get; set; }
         [Column("magentic_variation", TypeName = "DOUBLE(6)")]
@@ -36,6 +32,6 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("station_elevation", TypeName = "INTEGER(5)")]
         public long? StationElevation { get; set; }
         [Column("station_type", TypeName = "TEXT(3)")]
-        public string? StationType { get; set; }
+        public string StationType { get; set; }
     }
 }

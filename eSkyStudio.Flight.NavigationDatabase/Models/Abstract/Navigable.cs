@@ -8,9 +8,9 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models.Abstract
     public abstract class Navigable : INavigable
     {
         [Column("area_code", TypeName = "TEXT(3)")]
-        public string? AreaCode { get; set; }
+        public string AreaCode { get; set; }
         [Column("icao_code", TypeName = "TEXT(2)")]
-        public string? IcaoRegion { get; set; }
+        public string IcaoRegion { get; set; }
         public abstract double Latitude { get; set;}
         public abstract double Longitude { get; set;}
         public abstract string Identifier { get; set; }

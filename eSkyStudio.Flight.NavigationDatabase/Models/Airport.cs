@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using eSkyStudio.Flight.NavigationDatabase.Models.Abstract;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,17 +11,17 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("airport_identifier", TypeName = "TEXT(4)")]
         public override string Identifier { get; set; } = null!;
         [Column("airport_identifier_3letter", TypeName = "TEXT(3)")]
-        public string? AirportIdentifier3letter { get; set; }
+        public string AirportIdentifier3letter { get; set; }
         [Column("airport_name", TypeName = "TEXT(3)")]
-        public string? AirportName { get; set; }
+        public string AirportName { get; set; }
         [Column("airport_ref_latitude", TypeName = "DOUBLE(9)")]
         public override double Latitude { get; set; }
         [Column("airport_ref_longitude", TypeName = "DOUBLE(10)")]
         public override double Longitude { get; set; }
         [Column("ifr_capability", TypeName = "TEXT(1)")]
-        public string? IfrCapability { get; set; }
+        public string IfrCapability { get; set; }
         [Column("longest_runway_surface_code", TypeName = "TEXT(1)")]
-        public string? LongestRunwaySurfaceCode { get; set; }
+        public string LongestRunwaySurfaceCode { get; set; }
         [Column("elevation", TypeName = "INTEGER(5)")]
         public long? Elevation { get; set; }
         [Column("transition_altitude", TypeName = "INTEGER(5)")]
@@ -36,6 +33,6 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
         [Column("speed_limit_altitude", TypeName = "INTEGER(5)")]
         public long? SpeedLimitAltitude { get; set; }
         [Column("iata_ata_designator", TypeName = "TEXT(3)")]
-        public string? IataAtaDesignator { get; set; }
+        public string IataAtaDesignator { get; set; }
     }
 }

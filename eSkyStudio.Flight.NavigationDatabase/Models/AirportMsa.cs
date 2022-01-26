@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace eSkyStudio.Flight.NavigationDatabase.Models
@@ -11,21 +8,21 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
     public partial class AirportMsa
     {
         [Column("area_code", TypeName = "TEXT(3)")]
-        public string? AreaCode { get; set; }
+        public string AreaCode { get; set; }
         [Column("icao_code", TypeName = "TEXT(2)")]
-        public string? IcaoRegion { get; set; }
+        public string IcaoRegion { get; set; }
         [Column("airport_identifier", TypeName = "TEXT(4)")]
-        public string? AirportIdentifier { get; set; }
+        public string AirportIdentifier { get; set; }
         [Column("msa_center", TypeName = "TEXT(5)")]
-        public string? MsaCenter { get; set; }
+        public string MsaCenter { get; set; }
         [Column("msa_center_latitude", TypeName = "DOUBLE(9)")]
-        public double? MsaCenterLatitude { get; set; }
+        public double MsaCenterLatitude { get; set; }
         [Column("msa_center_longitude", TypeName = "DOUBLE(10)")]
-        public double? MsaCenterLongitude { get; set; }
+        public double MsaCenterLongitude { get; set; }
         [Column("magnetic_true_indicator", TypeName = "TEXT(1)")]
-        public string? MagneticTrueIndicator { get; set; }
+        public string MagneticTrueIndicator { get; set; }
         [Column("multiple_code", TypeName = "TEXT(1)")]
-        public string? MultipleCode { get; set; }
+        public string MultipleCode { get; set; }
         [Column("radius_limit", TypeName = "INTEGER(2)")]
         public long? RadiusLimit { get; set; }
         [Column("sector_bearing_1", TypeName = "INTEGER(3)")]

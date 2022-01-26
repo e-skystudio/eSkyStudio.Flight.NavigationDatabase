@@ -1,5 +1,4 @@
-﻿using eSkyStudio.Flight.NavigationDatabase.Models.Abstract;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace eSkyStudio.Flight.NavigationDatabase.Models
@@ -9,6 +8,6 @@ namespace eSkyStudio.Flight.NavigationDatabase.Models
     public partial class EnrouteWaypoint : Waypoint
     {
         [Column("waypoint_usage", TypeName = "TEXT(2)")]
-        public string? WaypointUsage { get; set; }
+        public string WaypointUsage { get; set; }
     }
 }
